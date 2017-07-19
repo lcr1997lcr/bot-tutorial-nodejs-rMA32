@@ -13,7 +13,8 @@ function respond() {
       botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; botRegexBrye = /^\/brye/;
       botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
       botRegexDaf = /^\/dafuq/; botRegexMA32 = /^\/pending/; botRegexTrade = /^\/trade/; 
-      botRegexWDF = /^\eric/; botRegexWDF2 = /^\Eric/ ; botRegexBoi = /^\/boi/; botRegexCuevs = /^\Luis Cuevas/;
+      botRegexWDF = /^\Sallinger/; botRegexWDF2 = /^\Eric/ ; botRegexBoi = /^\Boi/; botRegexCuevs = /^\Luis Cuevas/;
+      botRegexJose = /^\Jose/; botRegexFBM = /^\Feels bad/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
@@ -192,13 +193,25 @@ function respond() {
   
   else if(request.text && botRegexBoi.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://m.popkey.co/e60917/6443k.gif");
+    postMessage("http://i1.kym-cdn.com/photos/images/newsfeed/001/183/604/ee9.png");
     this.res.end();
   }
   
   else if(request.text && botRegexCuevs.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://giphy.com/gifs/take-that-eYBhGySRCLYKA");
+    postMessage("https://pbs.twimg.com/profile_images/697275273234874369/4sDtlNaH.jpg");
+    this.res.end();
+  } 
+  
+  else if(request.text && botRegexJose.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("Hi I'm Jose. I'm originally from Puerto Rico, but I'm living in Dayton, Ohio.");
+    this.res.end();
+  } 
+  
+  else if(request.text && botRegexFBM.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://ih1.redbubble.net/image.52959096.7208/flat,800x800,075,t.u7.jpg");
     this.res.end();
   } 
   
