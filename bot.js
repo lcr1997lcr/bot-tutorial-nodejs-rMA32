@@ -5,15 +5,15 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
+      botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\Salty/;botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
+      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\Shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
-      botRegexSlut = /^\/slut/; botRegexStop = /^\/stop/;
-      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; botRegexBrye = /^\/brye/;
+      botRegexSlut = /^\/slut/; botRegexStop = /^\Stop/;
+      botRegexProp = /^\/prop/;botRegexKys = /^\Kys/; botRegexSlam = /^\/slam/; botRegexBrye = /^\/brye/;
       botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
-      botRegexDaf = /^\/dafuq/; botRegexMA32 = /^\/pending/; botRegexTrade = /^\/trade/; 
-      botRegexWDF = /^\Sallinger/; botRegexWDF2 = /^\Eric/ ; botRegexBoi = /^\Boi/; botRegexCuevs = /^\Luis Cuevas/;
+      botRegexDaf = /^\Dafuq/; botRegexMA32 = /^\/pending/; botRegexTrade = /^\/trade/; 
+      botRegexWDF = /^\Salinger/; botRegexWDF2 = /^\Eric/ ; botRegexBoi = /^\Boi/; botRegexCuevs = /^\Luis Cuevas/; botRegexCuevs2 = /^\Luis cuevas/;
       botRegexJose = /^\Jose/; botRegexFBM = /^\Feels bad/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
@@ -198,6 +198,12 @@ function respond() {
   }
   
   else if(request.text && botRegexCuevs.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://pbs.twimg.com/profile_images/697275273234874369/4sDtlNaH.jpg");
+    this.res.end();
+  } 
+  
+  else if(request.text && botRegexCuevs2.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://pbs.twimg.com/profile_images/697275273234874369/4sDtlNaH.jpg");
     this.res.end();
