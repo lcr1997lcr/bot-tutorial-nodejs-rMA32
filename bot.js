@@ -14,7 +14,7 @@ function respond() {
       botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
       botRegexDaf = /^\Dafuq/; botRegexMA32 = /^\/pending/; botRegexTrade = /^\/trade/; 
       botRegexWDF = /^\Salinger/; botRegexWDF2 = /^\Eric/ ; botRegexBoi = /^\Boi/; botRegexCuevs = /^\Luis Cuevas/; botRegexCuevs2 = /^\Luis cuevas/;
-      botRegexJose = /^\Jose/; botRegexFBM = /^\Feels bad/;
+      botRegexJose = /^\Jose/; botRegexFBM = /^\Feels bad/; botRegexHey = /^\Hey/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
@@ -181,13 +181,13 @@ function respond() {
   
   else if(request.text && botRegexWDF.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("Who the fuck is Eric Salinger");
+    postMessage("Who the fuck is Eric Salinger?");
     this.res.end();
   }
   
   else if(request.text && botRegexWDF2.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("Who the fuck is Eric Salinger");
+    postMessage("Who the fuck is Eric Salinger?");
     this.res.end();
   }
   
@@ -220,6 +220,12 @@ function respond() {
     postMessage("https://ih1.redbubble.net/image.52959096.7208/flat,800x800,075,t.u7.jpg");
     this.res.end();
   } 
+  
+  else if(request.text && botRegexHey.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("Hey There");
+    this.res.end();
+  }
   
   else {
     console.log("don't care");
